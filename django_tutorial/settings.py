@@ -124,3 +124,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+# after login normally it looking for accounts/profile directory which we changed to 'blog-home' path
+LOGIN_REDIRECT_URL = 'blog-home'
+# this is needed for login requrement on the pages
+LOGIN_URL = 'user-login'
