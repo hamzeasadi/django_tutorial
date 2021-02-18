@@ -7,7 +7,7 @@ class Post(models.Model):
     """post model for creating posts by users"""
     title = models.CharField(max_length=100)
     content = models.TextField()
-    author = models.ForeignKey(User, default='None', on_delete=models.PROTECT)
+    author = models.ForeignKey(User, default='None', on_delete=models.CASCADE)
     date_posted = models.DateField(default=datetime.date.today)
 
     class Meta:
